@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="649748f8-7e93-4d81-bce8-606b6f4451a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/RegistrationPageServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegistrationPageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegistrationPageServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web-page/registerPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registerPage.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +128,7 @@
       <workItem from="1706114871791" duration="3536000" />
       <workItem from="1706379436105" duration="2667000" />
       <workItem from="1706552246575" duration="5055000" />
-      <workItem from="1706726084651" duration="1953000" />
+      <workItem from="1706726084651" duration="9233000" />
     </task>
     <task id="LOCAL-00001" summary="implemented tomcat logic, added logger">
       <option name="closed" value="true" />
@@ -139,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706383289182</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added Registration page servlet to Tomcat">
+      <option name="closed" value="true" />
+      <created>1706729013182</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706729013182</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,7 +154,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="implemented tomcat logic, added logger" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented tomcat logic, added logger" />
+    <MESSAGE value="added Registration page servlet to Tomcat" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Registration page servlet to Tomcat" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
