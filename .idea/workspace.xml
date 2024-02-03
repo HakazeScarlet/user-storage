@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="649748f8-7e93-4d81-bce8-606b6f4451a6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/Encryptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegistrationPageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegistrationPageServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/web-page/registerPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registerPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegistrationPageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegistrationPageServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +61,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Projects/images-uploader",
+    "last_opened_file_path": "D:/Projects/user-storage",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -128,7 +128,8 @@
       <workItem from="1706114871791" duration="3536000" />
       <workItem from="1706379436105" duration="2667000" />
       <workItem from="1706552246575" duration="5055000" />
-      <workItem from="1706726084651" duration="9233000" />
+      <workItem from="1706726084651" duration="9282000" />
+      <workItem from="1706971809743" duration="11094000" />
     </task>
     <task id="LOCAL-00001" summary="implemented tomcat logic, added logger">
       <option name="closed" value="true" />
@@ -146,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706729013182</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="implemented get &amp; post methods">
+      <option name="closed" value="true" />
+      <created>1706737403909</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706737403909</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,7 +164,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="implemented tomcat logic, added logger" />
     <MESSAGE value="added Registration page servlet to Tomcat" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Registration page servlet to Tomcat" />
+    <MESSAGE value="implemented get &amp; post methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented get &amp; post methods" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

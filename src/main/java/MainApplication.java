@@ -1,6 +1,7 @@
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
+import servlets.RegistrationPageServlet;
 
 import java.io.File;
 
