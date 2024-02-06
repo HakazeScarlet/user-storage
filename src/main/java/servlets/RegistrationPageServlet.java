@@ -24,6 +24,6 @@ public class RegistrationPageServlet extends HttpServlet {
         String surname = req.getParameter("surname");
         String phone = req.getParameter("phone");
         String country = req.getParameter("country");
-        System.out.println("");
+
     }
 }

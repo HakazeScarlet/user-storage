@@ -7,7 +7,7 @@
     <list default="true" id="649748f8-7e93-4d81-bce8-606b6f4451a6" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/src/test/java/services/EncryptorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/Encryptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/Encryptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/RegistrationPageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegistrationPageServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +87,7 @@
       <recent name="services" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EncryptorTest.encryptPassword">
+  <component name="RunManager" selected="JUnit.EncryptorTest.testEncryptPassword">
     <configuration name="MainApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainApplication" />
       <module name="user-storage.main" />
@@ -133,8 +133,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EncryptorTest.testEncryptPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-storage.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="services" />
+      <option name="MAIN_CLASS_NAME" value="services.EncryptorTest" />
+      <option name="METHOD_NAME" value="testEncryptPassword" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EncryptorTest.whenPasswordIsEmpty_returnFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-storage.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="services" />
+      <option name="MAIN_CLASS_NAME" value="services.EncryptorTest" />
+      <option name="METHOD_NAME" value="whenPasswordIsEmpty_returnFalse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EncryptorTest.testEncryptPassword" />
+        <item itemvalue="JUnit.EncryptorTest.whenPasswordIsEmpty_returnFalse" />
         <item itemvalue="JUnit.EncryptorTest.encryptPassword" />
         <item itemvalue="Application.MainApplication" />
         <item itemvalue="Gradle.user-storage [dependencies]" />
@@ -156,7 +190,7 @@
       <workItem from="1706726084651" duration="9282000" />
       <workItem from="1706971809743" duration="11733000" />
       <workItem from="1707063718426" duration="4251000" />
-      <workItem from="1707239972144" duration="2312000" />
+      <workItem from="1707239972144" duration="6968000" />
     </task>
     <task id="LOCAL-00001" summary="implemented tomcat logic, added logger">
       <option name="closed" value="true" />
@@ -190,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706993990554</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="updated encryption method">
+      <option name="closed" value="true" />
+      <created>1707246983087</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707246983087</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +243,8 @@
     <MESSAGE value="added Registration page servlet to Tomcat" />
     <MESSAGE value="implemented get &amp; post methods" />
     <MESSAGE value="implemented password encryptor" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented password encryptor" />
+    <MESSAGE value="updated encryption method" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated encryption method" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
