@@ -3,19 +3,21 @@ package services;
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
-import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
 import java.security.InvalidKeyException;
+import java.security.Key;
 import java.security.NoSuchAlgorithmException;
 
 public class Encryptor {
 
-    public byte[] encryptPassword(byte[] password, byte[] keyBytes) {
+    public static byte[] encryptPassword(byte[] password) {
         try {
+            KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
+            keyGenerator.init(256);
+            Key key = keyGenerator.generateKey();
             Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
-            SecretKey secretKey = new SecretKeySpec(keyBytes, "AES");
-            cipher.init(Cipher.ENCRYPT_MODE, secretKey);
+            cipher.init(Cipher.ENCRYPT_MODE, key);
             return cipher.doFinal(password);
         } catch (NoSuchAlgorithmException e) {
             throw new AvailableAlgorithmException("Cryptographic algorithm is not available in the environment");
