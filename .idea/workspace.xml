@@ -5,14 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="649748f8-7e93-4d81-bce8-606b6f4451a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/services/EncryptorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/Encryptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/Encryptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlets/RegistrationPageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegistrationPageServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/services/EncryptorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/services/EncryptorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -45,8 +49,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/web-page/registerPage.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="2bGyTvQpgfWMM1Bd4Rq1AFyx4oG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -95,27 +102,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="user-storage [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="dependencies" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
+    <configuration name="EncryptorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-storage.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="services" />
+      <option name="MAIN_CLASS_NAME" value="services.EncryptorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="EncryptorTest.encryptPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-storage.test" />
@@ -168,10 +168,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.EncryptorTest.testEncryptPassword" />
+        <item itemvalue="JUnit.EncryptorTest" />
         <item itemvalue="JUnit.EncryptorTest.whenPasswordIsEmpty_returnFalse" />
         <item itemvalue="JUnit.EncryptorTest.encryptPassword" />
         <item itemvalue="Application.MainApplication" />
-        <item itemvalue="Gradle.user-storage [dependencies]" />
       </list>
     </recent_temporary>
   </component>
@@ -191,6 +191,7 @@
       <workItem from="1706971809743" duration="11733000" />
       <workItem from="1707063718426" duration="4251000" />
       <workItem from="1707239972144" duration="6968000" />
+      <workItem from="1707324611170" duration="3903000" />
     </task>
     <task id="LOCAL-00001" summary="implemented tomcat logic, added logger">
       <option name="closed" value="true" />

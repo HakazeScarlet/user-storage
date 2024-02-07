@@ -18,12 +18,21 @@ public class RegistrationPageServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        User user = new User();
         String email = req.getParameter("email");
-        String password = req.getParameter("password");
+//        user.setEmail(email);
+
+        String rawPassword = req.getParameter("password");
+        // TODO: RegistrationPageServlet includes UserService
+        // TODO: UserService includes EncryptionService & UserRepository
+//        byte[] password = user.getPassword().getBytes(StandardCharsets.UTF_8);
+//        byte[] encryptedPassword = encryptor.encrypt(password);
+
         String name = req.getParameter("name");
         String surname = req.getParameter("surname");
         String phone = req.getParameter("phone");
         String country = req.getParameter("country");
 
+        // TODO: response as JSP
     }
 }

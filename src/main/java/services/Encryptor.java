@@ -11,11 +11,16 @@ import java.security.NoSuchAlgorithmException;
 
 public class Encryptor {
 
+    // TODO: add coding (UTF_8)
+    // TODO: change byte[] parameter to String parameter
     public static byte[] encryptPassword(byte[] password) {
         try {
+            // TODO: check hashing, add hashing if it is won't
             KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
-            keyGenerator.init(256);
+//            keyGenerator.init(256, SecureRandom.getInstance("SHA")); // SHA, MD5 hashing algorithms
+            keyGenerator.init(256); // TODO: extract number to constant
             Key key = keyGenerator.generateKey();
+
             Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
             cipher.init(Cipher.ENCRYPT_MODE, key);
             return cipher.doFinal(password);
