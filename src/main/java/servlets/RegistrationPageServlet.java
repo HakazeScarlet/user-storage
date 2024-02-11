@@ -20,7 +20,7 @@ public class RegistrationPageServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        User user = new User();
         String email = req.getParameter("email");
-//        user.setEmail(email);
+//        user.get(email);
 
         String rawPassword = req.getParameter("password");
         // TODO: RegistrationPageServlet includes UserService

@@ -3,27 +3,42 @@ package services;
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.SecretKeySpec;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
-import java.security.Key;
+import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
+import java.util.Base64;
 
 public class Encryptor {
 
-    // TODO: add coding (UTF_8)
-    // TODO: change byte[] parameter to String parameter
-    public static byte[] encryptPassword(byte[] password) {
-        try {
-            // TODO: check hashing, add hashing if it is won't
-            KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
-//            keyGenerator.init(256, SecureRandom.getInstance("SHA")); // SHA, MD5 hashing algorithms
-            keyGenerator.init(256); // TODO: extract number to constant
-            Key key = keyGenerator.generateKey();
+    private static final Charset CHARSET_UTF_8 = StandardCharsets.UTF_8;
+    private static final String TRANSFORMATION = "AES/CBC/PKCS5Padding";
+    private static final String HASHING_ALGORITHM = "PBKDF2WithHmacSHA256";
+    private static final String CIPHER_ALGORITHM = "AES";
+    private static final int KEY_LENGTH = 32;
 
-            Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
-            cipher.init(Cipher.ENCRYPT_MODE, key);
-            return cipher.doFinal(password);
+    public static String encrypt(String password) {
+        try {
+            MessageDigest messageDigest = MessageDigest.getInstance(HASHING_ALGORITHM);
+            byte[] hash = messageDigest.digest(password.getBytes(CHARSET_UTF_8));
+            byte[] key = Arrays.copyOf(hash, KEY_LENGTH);
+            SecretKeySpec secretKeySpec = new SecretKeySpec(key, CIPHER_ALGORITHM);
+
+//            SecretKeyFactory factory = SecretKeyFactory.getInstance(HASHING_ALGORITHM);
+//            String salt = "RAW";
+//            int passwordIterations = 65536;
+//            int keyLength = 256;
+//            KeySpec spec = new PBEKeySpec(password.toCharArray(), salt.getBytes(), passwordIterations, keyLength);
+//            SecretKey key = new SecretKeySpec(factory.generateSecret(spec).getEncoded(), CIPHER_ALGORITHM);
+
+            Cipher cipher = Cipher.getInstance(TRANSFORMATION);
+            cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
+            byte[] encryptedPassword = cipher.doFinal(password.getBytes(CHARSET_UTF_8));
+            return Base64.getEncoder().encodeToString(encryptedPassword);
         } catch (NoSuchAlgorithmException e) {
             throw new AvailableAlgorithmException("Cryptographic algorithm is not available in the environment");
         } catch (NoSuchPaddingException e) {
