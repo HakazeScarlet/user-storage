@@ -10,30 +10,21 @@ import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Arrays;
 import java.util.Base64;
 
 public class Encryptor {
 
     private static final Charset CHARSET_UTF_8 = StandardCharsets.UTF_8;
-    private static final String TRANSFORMATION = "AES/CBC/PKCS5Padding";
-    private static final String HASHING_ALGORITHM = "PBKDF2WithHmacSHA256";
+    private static final String TRANSFORMATION = "AES/ECB/PKCS5Padding";
+    private static final String HASHING_ALGORITHM = "SHA256";
     private static final String CIPHER_ALGORITHM = "AES";
-    private static final int KEY_LENGTH = 32;
 
     public static String encrypt(String password) {
         try {
             MessageDigest messageDigest = MessageDigest.getInstance(HASHING_ALGORITHM);
-            byte[] hash = messageDigest.digest(password.getBytes(CHARSET_UTF_8));
-            byte[] key = Arrays.copyOf(hash, KEY_LENGTH);
-            SecretKeySpec secretKeySpec = new SecretKeySpec(key, CIPHER_ALGORITHM);
+            byte[] hashedPassword = messageDigest.digest(password.getBytes(CHARSET_UTF_8));
 
-//            SecretKeyFactory factory = SecretKeyFactory.getInstance(HASHING_ALGORITHM);
-//            String salt = "RAW";
-//            int passwordIterations = 65536;
-//            int keyLength = 256;
-//            KeySpec spec = new PBEKeySpec(password.toCharArray(), salt.getBytes(), passwordIterations, keyLength);
-//            SecretKey key = new SecretKeySpec(factory.generateSecret(spec).getEncoded(), CIPHER_ALGORITHM);
+            SecretKeySpec secretKeySpec = new SecretKeySpec(hashedPassword, CIPHER_ALGORITHM);
 
             Cipher cipher = Cipher.getInstance(TRANSFORMATION);
             cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
