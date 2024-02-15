@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="649748f8-7e93-4d81-bce8-606b6f4451a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
+    <list default="true" id="649748f8-7e93-4d81-bce8-606b6f4451a6" name="Changes" comment="created">
+      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/Encryptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/Encryptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/RegistrationPageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegistrationPageServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/services/EncryptorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/services/EncryptorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +81,11 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mongo&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -199,6 +202,11 @@
       <workItem from="1707324611170" duration="3903000" />
       <workItem from="1707408164817" duration="9648000" />
       <workItem from="1707505500783" duration="2549000" />
+      <workItem from="1707666947369" duration="5188000" />
+      <workItem from="1707820506609" duration="2459000" />
+      <workItem from="1707832211944" duration="344000" />
+      <workItem from="1707833542991" duration="2308000" />
+      <workItem from="1708000958874" duration="3979000" />
     </task>
     <task id="LOCAL-00001" summary="implemented tomcat logic, added logger">
       <option name="closed" value="true" />
@@ -240,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707246983087</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fixed encryption method">
+      <option name="closed" value="true" />
+      <created>1707667003123</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707667003123</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +268,8 @@
     <MESSAGE value="implemented get &amp; post methods" />
     <MESSAGE value="implemented password encryptor" />
     <MESSAGE value="updated encryption method" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated encryption method" />
+    <MESSAGE value="fixed encryption method" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed encryption method" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
