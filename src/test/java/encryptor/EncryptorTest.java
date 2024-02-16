@@ -1,4 +1,4 @@
-package services;
+package encryptor;
 
 import org.junit.jupiter.api.Test;
 
@@ -12,8 +12,10 @@ class EncryptorTest {
     void testEncryptPassword() {
         String password = "password1234";
 
-        String actual1 = Encryptor.encrypt(password);
-        String actual2 = Encryptor.encrypt(password);
+        EncryptorService encryptorService = new EncryptorService();
+
+        String actual1 = encryptorService.encrypt(password);
+        String actual2 = encryptorService.encrypt(password);
 
         assertEquals(actual1, actual2);
     }

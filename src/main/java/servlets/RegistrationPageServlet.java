@@ -18,7 +18,7 @@ public class RegistrationPageServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        User user = new User();
+//        user.User user = new user.User();
         String email = req.getParameter("email");
 //        user.get(email);
 

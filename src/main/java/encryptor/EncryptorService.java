@@ -1,4 +1,4 @@
-package services;
+package encryptor;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -12,14 +12,14 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 
-public class Encryptor {
+public class EncryptorService {
 
     private static final Charset CHARSET_UTF_8 = StandardCharsets.UTF_8;
     private static final String TRANSFORMATION = "AES/ECB/PKCS5Padding";
     private static final String HASHING_ALGORITHM = "SHA256";
     private static final String CIPHER_ALGORITHM = "AES";
 
-    public static String encrypt(String password) {
+    public String encrypt(String password) {
         try {
             MessageDigest messageDigest = MessageDigest.getInstance(HASHING_ALGORITHM);
             byte[] hashedPassword = messageDigest.digest(password.getBytes(CHARSET_UTF_8));
@@ -30,14 +30,10 @@ public class Encryptor {
             cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
             byte[] encryptedPassword = cipher.doFinal(password.getBytes(CHARSET_UTF_8));
             return Base64.getEncoder().encodeToString(encryptedPassword);
-        } catch (NoSuchAlgorithmException e) {
-            throw new AvailableAlgorithmException("Cryptographic algorithm is not available in the environment");
-        } catch (NoSuchPaddingException e) {
-            throw new AvailablePaddingException("Padding algorithm is not available in the environment");
-        } catch (IllegalBlockSizeException e) {
+        } catch (NoSuchAlgorithmException | NoSuchPaddingException e) {
+            throw new AvailableAlgorithmException("Cryptographic or padding algorithm is not available in the environment");
+        } catch (IllegalBlockSizeException | BadPaddingException e) {
             throw new CipherBlockSizeException("The length of the data provided for the block cipher is incorrect");
-        } catch (BadPaddingException e) {
-            throw new CipherPaddingException("Failed to encrypt data");
         } catch (InvalidKeyException e) {
             throw new CipherInitializeException("The provided key is not suitable for initializing the cipher");
         }
@@ -46,20 +42,6 @@ public class Encryptor {
     private static final class AvailableAlgorithmException extends RuntimeException {
 
         public AvailableAlgorithmException(String message) {
-            super(message);
-        }
-    }
-
-    private static final class AvailablePaddingException extends RuntimeException {
-
-        public AvailablePaddingException(String message) {
-            super(message);
-        }
-    }
-
-    private static final class CipherPaddingException extends RuntimeException {
-
-        public CipherPaddingException(String message) {
             super(message);
         }
     }
