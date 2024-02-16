@@ -5,6 +5,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import user.User;
 
 import java.io.IOException;
 
@@ -17,10 +18,10 @@ public class RegistrationPageServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        user.User user = new user.User();
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
+        User user = new User();
         String email = req.getParameter("email");
-//        user.get(email);
+        user.getEmail();
 
         String rawPassword = req.getParameter("password");
         // TODO: RegistrationPageServlet includes UserService

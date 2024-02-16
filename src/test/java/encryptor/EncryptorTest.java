@@ -6,13 +6,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class EncryptorTest {
 
-
-    // TODO: rename test by convention
     @Test
-    void testEncryptPassword() {
+    void whenEncryptionPasswordsSame_returnTrue() {
         String password = "password1234";
 
-        EncryptorService encryptorService = new EncryptorService();
+        EncryptionService encryptorService = new EncryptionService();
 
         String actual1 = encryptorService.encrypt(password);
         String actual2 = encryptorService.encrypt(password);

@@ -12,7 +12,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 
-public class EncryptorService {
+public class EncryptionService {
 
     private static final Charset CHARSET_UTF_8 = StandardCharsets.UTF_8;
     private static final String TRANSFORMATION = "AES/ECB/PKCS5Padding";
