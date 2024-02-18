@@ -11,6 +11,9 @@ public class MainApplication {
 
     private static final String WEBAPP_DIR_LOCATION = "src/main/webapp/";
     private static final int TOMCAT_PORT = 8080;
+
+    public MainApplication() {
+    }
 //    private static final ch.qos.logback.classic.Logger logger = (ch.qos.logback.classic.Logger) LoggerFactory.getLogger(MainApplication.class);
 
     public static void main(String[] args) {

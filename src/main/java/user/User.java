@@ -9,6 +9,15 @@ public class User {
     private String country;
     private String password;
 
+    public User(String email, String name, String surname, String phone, String country, String password) {
+        this.email = email;
+        this.name = name;
+        this.surname = surname;
+        this.phone = phone;
+        this.country = country;
+        this.password = password;
+    }
+
     public String getPassword() {
         return password;
     }

@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="649748f8-7e93-4d81-bce8-606b6f4451a6" name="Changes" comment="fixed database connect &amp; fixed TODOs">
+    <list default="true" id="649748f8-7e93-4d81-bce8-606b6f4451a6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/Encryptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/encryptor/EncryptorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlets/RegistrationPageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegistrationPageServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/services/EncryptorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/encryptor/EncryptorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/encryptor/EncryptorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/encryptor/EncryptionServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +109,7 @@
       <recent name="services" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EncryptorTest.whenEncryptSamePasswords_returnTrue">
+  <component name="RunManager" selected="Application.MainApplication">
     <configuration name="MainApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainApplication" />
       <module name="user-storage.main" />
@@ -118,7 +117,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EncryptorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EncryptionServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-storage.test" />
       <extension name="coverage">
         <pattern>
@@ -126,14 +125,14 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="services" />
-      <option name="MAIN_CLASS_NAME" value="encryptor.EncryptorTest" />
+      <option name="PACKAGE_NAME" value="encryptor" />
+      <option name="MAIN_CLASS_NAME" value="encryptor.EncryptionServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EncryptorTest.encryptPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EncryptionServiceTest.encryptPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-storage.test" />
       <extension name="coverage">
         <pattern>
@@ -141,15 +140,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="services" />
-      <option name="MAIN_CLASS_NAME" value="encryptor.EncryptorTest" />
+      <option name="PACKAGE_NAME" value="encryptor" />
+      <option name="MAIN_CLASS_NAME" value="encryptor.EncryptionServiceTest" />
       <option name="METHOD_NAME" value="encryptPassword" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EncryptorTest.whenEncryptSamePasswords_returnTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EncryptionServiceTest.whenEncryptSamePasswords_returnTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-storage.test" />
       <extension name="coverage">
         <pattern>
@@ -157,15 +156,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="services" />
-      <option name="MAIN_CLASS_NAME" value="encryptor.EncryptorTest" />
+      <option name="PACKAGE_NAME" value="encryptor" />
+      <option name="MAIN_CLASS_NAME" value="encryptor.EncryptionServiceTest" />
       <option name="METHOD_NAME" value="whenEncryptSamePasswords_returnTrue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EncryptorTest.whenPasswordIsEmpty_returnFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EncryptionServiceTest.whenPasswordIsEmpty_returnFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-storage.test" />
       <extension name="coverage">
         <pattern>
@@ -173,8 +172,8 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="services" />
-      <option name="MAIN_CLASS_NAME" value="encryptor.EncryptorTest" />
+      <option name="PACKAGE_NAME" value="encryptor" />
+      <option name="MAIN_CLASS_NAME" value="encryptor.EncryptionServiceTest" />
       <option name="METHOD_NAME" value="whenPasswordIsEmpty_returnFalse" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -183,10 +182,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.EncryptorTest.whenPasswordIsEmpty_returnFalse" />
-        <item itemvalue="JUnit.EncryptorTest.whenEncryptSamePasswords_returnTrue" />
-        <item itemvalue="JUnit.EncryptorTest.encryptPassword" />
-        <item itemvalue="JUnit.EncryptorTest" />
+        <item itemvalue="JUnit.EncryptionServiceTest.whenPasswordIsEmpty_returnFalse" />
+        <item itemvalue="JUnit.EncryptionServiceTest.whenEncryptSamePasswords_returnTrue" />
+        <item itemvalue="JUnit.EncryptionServiceTest.encryptPassword" />
+        <item itemvalue="JUnit.EncryptionServiceTest" />
         <item itemvalue="Application.MainApplication" />
       </list>
     </recent_temporary>
@@ -216,7 +215,8 @@
       <workItem from="1707833542991" duration="2308000" />
       <workItem from="1708000958874" duration="3979000" />
       <workItem from="1708041248468" duration="264000" />
-      <workItem from="1708101667597" duration="3304000" />
+      <workItem from="1708101667597" duration="6873000" />
+      <workItem from="1708264662990" duration="12989000" />
     </task>
     <task id="LOCAL-00001" summary="implemented tomcat logic, added logger">
       <option name="closed" value="true" />
@@ -274,7 +274,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708040465852</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="refactored project &amp; fixed exceptions handling">
+      <option name="closed" value="true" />
+      <created>1708116040913</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708116040913</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added service to save users data">
+      <option name="closed" value="true" />
+      <created>1708122780346</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708122780346</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +305,9 @@
     <MESSAGE value="fixed encryption method" />
     <MESSAGE value="created" />
     <MESSAGE value="fixed database connect &amp; fixed TODOs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed database connect &amp; fixed TODOs" />
+    <MESSAGE value="refactored project &amp; fixed exceptions handling" />
+    <MESSAGE value="added service to save users data" />
+    <option name="LAST_COMMIT_MESSAGE" value="added service to save users data" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
