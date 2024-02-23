@@ -8,7 +8,6 @@ import java.io.File;
 public class MainApplication {
 
     private static final String REGISTRATION_PAGE_SERVLET_NAME = "RegistrationPage";
-
     private static final String WEBAPP_DIR_LOCATION = "src/main/webapp/";
     private static final int TOMCAT_PORT = 8080;
 
