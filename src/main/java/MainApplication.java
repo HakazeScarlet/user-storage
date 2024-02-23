@@ -1,7 +1,10 @@
+import encryptor.EncryptionService;
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
 import servlets.RegistrationPageServlet;
+import user.UserRepository;
+import user.UserService;
 
 import java.io.File;
 
@@ -16,12 +19,17 @@ public class MainApplication {
 //    private static final ch.qos.logback.classic.Logger logger = (ch.qos.logback.classic.Logger) LoggerFactory.getLogger(MainApplication.class);
 
     public static void main(String[] args) {
-        final Tomcat tomcat = new Tomcat();
+        Tomcat tomcat = new Tomcat();
         tomcat.setPort(TOMCAT_PORT);
 
-        final Context context = tomcat.addWebapp("", new File(WEBAPP_DIR_LOCATION).getAbsolutePath());
+        Context context = tomcat.addWebapp("", new File(WEBAPP_DIR_LOCATION).getAbsolutePath());
 
-        final RegistrationPageServlet registrationPageServlet = new RegistrationPageServlet();
+        UserRepository userRepository = new UserRepository();
+        UserService userService = new UserService(userRepository);
+        EncryptionService encryptionService = new EncryptionService();
+
+        RegistrationPageServlet registrationPageServlet = new RegistrationPageServlet(userService, encryptionService);
+
         tomcat.addServlet(context.getPath(), REGISTRATION_PAGE_SERVLET_NAME, registrationPageServlet);
         context.addServletMappingDecoded("/registration", REGISTRATION_PAGE_SERVLET_NAME);
 

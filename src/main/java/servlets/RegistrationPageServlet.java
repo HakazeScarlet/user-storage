@@ -36,14 +36,9 @@ public class RegistrationPageServlet extends HttpServlet {
         String country = req.getParameter("country");
         String rawPassword = req.getParameter("password");
 
-        User user = new User(email, name, surname, phone, country, rawPassword);
-        user.setEmail(email);
-        user.setName(name);
-        user.setSurname(surname);
-        user.setPhone(phone);
-        user.setCountry(country);
         String encryptedPassword = encryptionService.encrypt(rawPassword);
-        user.setPassword(encryptedPassword);
+        User user = new User(email, name, surname, phone, country, encryptedPassword);
+
         userService.save(user);
 
         // TODO: response as JSP
