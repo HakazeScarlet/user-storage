@@ -14,12 +14,12 @@ import java.util.Base64;
 
 public class EncryptionService {
 
-    private static final Charset CHARSET_UTF_8 = StandardCharsets.UTF_8;
-    private static final String TRANSFORMATION = "AES/ECB/PKCS5Padding";
-    private static final String HASHING_ALGORITHM = "SHA256";
-    private static final String CIPHER_ALGORITHM = "AES";
+    private final Charset CHARSET_UTF_8 = StandardCharsets.UTF_8;
+    private final String TRANSFORMATION = "AES/ECB/PKCS5Padding";
+    private final String HASHING_ALGORITHM = "SHA256";
+    private final String CIPHER_ALGORITHM = "AES";
 
-    public String encrypt(String password) {
+    public String encrypt(final String password) {
         try {
             MessageDigest messageDigest = MessageDigest.getInstance(HASHING_ALGORITHM);
             byte[] hashedPassword = messageDigest.digest(password.getBytes(CHARSET_UTF_8));
@@ -30,6 +30,8 @@ public class EncryptionService {
             cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
             byte[] encryptedPassword = cipher.doFinal(password.getBytes(CHARSET_UTF_8));
             return Base64.getEncoder().encodeToString(encryptedPassword);
+//        } catch (GeneralSecurityException e) {
+//            // TODO: remove two next catches and write more informative message for current catch with GeneralSecurityException
         } catch (NoSuchAlgorithmException | NoSuchPaddingException e) {
             throw new AvailableAlgorithmException("Cryptographic or padding algorithm is not available in the environment");
         } catch (IllegalBlockSizeException | BadPaddingException e) {
