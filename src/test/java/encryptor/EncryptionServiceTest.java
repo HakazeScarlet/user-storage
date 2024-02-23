@@ -7,8 +7,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class EncryptionServiceTest {
 
     @Test
-    void whenEncryptionPasswordsSame_returnTrue() {
-        String password = "password1234";
+    void whenEncryptionPasswordsAreSame_returnTrue() {
+        String password = "password1234MEOW_675@#$test_test_TESTpassWORD666_616%^*qwerty_123456789";
 
         EncryptionService encryptorService = new EncryptionService();
 
